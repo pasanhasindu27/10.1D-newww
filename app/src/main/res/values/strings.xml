@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Personalized Learning</string>
+    <string name="retry_button">Try Again</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_title">Profile</string>
+    <string name="share_button">Share</string>
+    <string name="total_score">Total Score</string>
+    <string name="community_rank">Community Rank</string>
+    <string name="quizzes_completed">Quizzes Completed</string>
+    <string name="accuracy">Accuracy</string>
+    
+    <!-- History Screen -->
+    <string name="history_title">History</string>
+    <string name="history_subtitle">Your completed quizzes and practice sessions</string>
+    
+    <!-- Upgrade Screen -->
+    <string name="upgrade_title">Upgrade</string>
+    <string name="upgrade_subtitle">your experience</string>
+    <string name="starter_plan">Starter</string>
+    <string name="intermediate_plan">Intermediate</string>
+    <string name="advanced_plan">Advanced</string>
+    <string name="popular_tag">POPULAR</string>
+    <string name="purchase_button">Purchase</string>
+    <string name="starter_description">Access 50 questions per day</string>
+    <string name="intermediate_description">Unlimited questions and personalized feedback</string>
+    <string name="advanced_description">All features plus AI-powered learning path</string>
+    
+    <!-- Share Dialog -->
+    <string name="share_dialog_title">Share</string>
+</resources>

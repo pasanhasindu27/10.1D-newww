@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Loading Indicator -->
+    <LinearLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."/>
+    </LinearLayout>
+
+    <!-- Error Container -->
+    <LinearLayout
+        android:id="@+id/errorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Add error UI components here -->
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <!-- Add this button somewhere appropriate in your layout -->
+<Button
+android:id="@+id/btnProfile"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="View Profile"
+android:background="@drawable/button_background"
+android:textColor="#FFFFFF"
+android:layout_margin="16dp" />
+
+</LinearLayout>

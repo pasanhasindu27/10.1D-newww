@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <!-- Compatible RadioButton Style -->
+    <style name="RadioButtonStyle" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:textSize">14sp</item>
+        <!-- Set padding for all sides -->
+        <item name="android:padding">8dp</item>
+        <!-- Individual padding for older APIs -->
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="SetupEditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
+    </style>
+</resources>

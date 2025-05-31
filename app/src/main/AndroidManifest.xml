@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.llmexample">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <!-- Google Pay Configuration -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <!-- Activities... -->
+        <!-- Login Activity (Entry Point) -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Setup Activity -->
+        <activity
+            android:name=".activities.SetupActivity"
+            android:parentActivityName=".activities.LoginActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Topic Selection Activity -->
+        <activity
+            android:name=".activities.TopicSelectionActivity"
+            android:parentActivityName=".activities.SetupActivity"/>
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:parentActivityName=".activities.TopicSelectionActivity"
+            android:launchMode="singleTop"/>
+
+        <!-- Quiz Activity -->
+        <activity
+            android:name=".activities.QuizActivity"
+            android:parentActivityName=".activities.DashboardActivity"/>
+
+        <!-- Results Activity -->
+        <activity
+            android:name=".activities.ResultsActivity"
+            android:parentActivityName=".activities.QuizActivity"/>
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:parentActivityName=".activities.ResultsActivity"/>
+
+        <!-- History Activity -->
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:parentActivityName=".activities.ResultsActivity"/>
+
+        <!-- Upgrade Activity -->
+        <activity
+            android:name=".activities.UpgradeActivity"
+            android:parentActivityName=".activities.ProfileActivity"/>
+    
+    </application>
+</manifest>
